@@ -57,6 +57,9 @@ public class Main {
      * @return a list containing the email addresses in the string.
      */
     public static List<String> extractEmails(String str) {
+        if (str == null) {
+            return new ArrayList<>();
+        }
         String regex = "[A-Za-z0-9._-]+@(mail.)?utoronto.ca";
 
         final Pattern pattern = Pattern.compile(regex);
