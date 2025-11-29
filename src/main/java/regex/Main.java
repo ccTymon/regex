@@ -80,7 +80,7 @@ public class Main {
      * @return whether str contains the same capital letter twice.
      */
     public static boolean checkForDoubles(String str) {
-        String regex = ".*([A-Z]).*\1.*";
+        String regex = ".*([A-Z]).*\\1.*";
         return str.matches(regex);
     }
 }
