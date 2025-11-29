@@ -38,7 +38,9 @@ public class Main {
      * @return whether the string satisfies the password requirements
      */
     public static boolean checkForPassword(String str, int minLength) {
-
+        if (str == null) {
+            return false;
+        }
         String regex = "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{" + minLength + ",}";
         final boolean propertyOne = Pattern.matches(regex, str);
         // as needed, modify this code.
@@ -83,6 +85,9 @@ public class Main {
      * @return whether str contains the same capital letter twice.
      */
     public static boolean checkForDoubles(String str) {
+        if (str == null) {
+            return false;
+        }
         String regex = ".*([A-Z]).*\\1.*";
         return str.matches(regex);
     }
